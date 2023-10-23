@@ -3,12 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainstyle.css"> 
+    <style>
+        .image-row {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .image-row img {
+            width: 200px;
+            height: 200px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-row p {
+            margin: 10px 50px;
+            font-weight: bold;
+        }
+
+        .image-row p a {
+            color: #333;
+            text-decoration: none;
+        }
+        
+        h3 {
+            padding: 10px;
+        }
+
+        p a {
+            color: #333;
+            font-weight: bolder;
+        }
+    </style>
     <title>Кулінарний веб-сайт</title>
 </head>
 <body>
  
     <header>
-        <div style="padding: 10px; display: flex; justify-content: space-between;">
+        <div>
             <div> GAZDYNA</div>
             <nav>
                 <a href="recipies.html" >Рецепти</a> 
@@ -16,24 +51,25 @@
                 <a href="favorite.html" >Обране</a> 
                 <a href="contacts.html" >Контакти</a> 
             </nav>
-            <button style="margin-right: 20px;">Увійти</button>
+            <button >Увійти</button>
         </div>
     </header>
 
     <h3>Головна / Рецепти</h3>
-    <p><a href="Filters.html">Фільтри</a></p>
-    <div>
-        <div style="display: inline-block; text-align: center;">
-            <img src="image1.jpg" alt="Панкейки" style="width: 200px; height: 200px;">
-            <p><a href="/рецепт1">Класичні панкейки з кленовим сиропом</a></p>
+    <p><a href="Filters.html" style="margin-left: 20px";>Фільтри</a></p>
+    <div class="image-row">
+        <div>
+            <img src="image1.jpg" alt="Зображення 1" >
+            <p><a href="recipy1.html">Класичні панкейки з кленовим сиропом</a></p>
         </div>
-        <div style="display: inline-block; text-align: center;">
-            <img src="image2.jpg" alt="Шампінйони" style="width: 200px; height: 200px;">
-            <p><a href="/рецепт2">Фаршировані шампінйони з сиром та шинкою</a></p>
+        <div>
+            <img src="image2.jpg" alt="Зображення 2" >
+            <p><a href="recipy2.html">Фаршировані шампінйони з сиром та шинкою</a></p>
         </div>
-        <div style="display: inline-block; text-align: center;">
-            <img src="image3.jpeg" alt="Долма" style="width: 200px; height: 200px;">
-            <p><a href="/рецепт3">Найсоковитіша долма з качкою</a></p>
+        <div>
+            <img src="image3.jpeg" alt="Зображення 3" >
+            <p><a href="recipy3.html">Найсоковитіша долма з качкою</a></p>
         </div>
+    </div>
 </body>
 </html>

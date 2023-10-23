@@ -3,6 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+    [id]{
+        font-size: 18px;
+    }
+
+    [id*="welcome"]{
+        font-weight: bolder;
+    }
+
+    aside > h2 {
+        text-decoration: underline;
+    }       
+
+    h2+h3{
+        color:green;
+    }
+
+    a:link {
+        color: rgb(172, 172, 172);
+    }
+
+    a:active {
+        color: rgb(243, 50, 92);
+    }
+    
+    p::first-line {
+        font-weight: bold;
+    }
+
+    .image-row {
+        display: inline-table;
+        position: relative;
+    }
+
+    .image-row img {
+        margin: 15px;
+        position: relative;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .image-row img:nth-child(1) {
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .image-row img:nth-child(2) {
+        z-index: 2;
+        top: 0;
+        left: 0;
+    }
+
+    .image-row img:nth-child(3) {
+        z-index: 3;
+        top: 0;
+        left: 0;
+    }
+
+    header h1 {
+        font-family: 'monospace', monospace;
+        font-size: 24px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    }
+
+    @keyframes shake {
+
+        0% {
+            transform: translateX(0);
+        }
+        25% {
+            transform: translateX(-5px);
+        }
+        50% {
+            transform: translateX(5px);
+        }
+        75% {
+            transform: translateX(-5px);
+        }
+        100% {
+            transform: translateX(5px);
+        }
+    
+    }
+    .image-row img:hover {
+        animation-name: shake;
+        animation-duration: 3s;
+    }
+    </style>
+
     <title>Gazdyna</title>
 </head>
 <body>
@@ -16,33 +106,37 @@
             <div><a href="#advantages">Переваги</a></div>
             <div><a href="#subscription">Підписка</a></div>
             <div>
-        </div>
     </header>
 
     <main>
-        <section id="welcome">
-            <h2>Вітаємо!</h2>
+        <section id="welcome">    
             <article>
+                <h2>Вітаємо!</h2>
                 <p>Вітаємо на нашому сайті. Для більш зручного користування ви можете зареєструватись в системі, будемо раді новим користувачам</p>
             </article>
         </section>
 
         <section id="about_us">
-            <h2>Про нас</h2>
             <article>
+                <h2>Про нас</h2>
                 <p>Вітаємо! Ми створили для вас зручний кулінарний ресурс, в якому ви знайдете безліч корисних речей:</p>
                 <ul>
                     <li>Рецепти</li>
                     <li>Кулінарні поради</li>
                     <li>Можливість пошуку страв за вашими критеріями</li>
                 </ul>
+                <div class="image-row">
+                    <img src="image1.jpg" alt="Зображення 1" style="width: 200px; height: 200px;">
+                    <img src="image2.jpg" alt="Зображення 2" style="width: 200px; height: 200px;">
+                    <img src="image3.jpeg" alt="Зображення 3" style="width: 200px; height: 200px;">
+                </div>
             </article>
         </section>
     
         <section id="advantages">
-            <h2>Переваги</h2>
             <article>
-                <p><strong>У нашого сайту є кілька дуже корисних особливостей:</strong></p>
+                <h2>Переваги</h2>
+                <p><b>У нашого сайту є кілька дуже корисних особливостей:</b></p>
                 <ul>
                     <li type="I">Фільтрації рецептів за часом приготування та типом страв</li>
                     <li type="I">Збереження рецептів в обране</li>
@@ -53,8 +147,8 @@
         </section>
     
         <section id="subscription">
-            <h2>Підписка</h2>
             <article>
+                <h2>Підписка</h2>
                 <p> Ви також можете оформити підписку на нашому ресурсі, за якою ви отримуватимете рекомендації щодо страв на основі ваших збережень та можливість створювати й додавати власні рецепти!</p>
                 <table border="1">
                     <caption>Види підписок</caption>
@@ -118,7 +212,7 @@
 
     <aside>
         <h2>Наші партнери</h2>
-        <h3 style="color: green;">Магазини, товари з яких ми рекомендуємо</h3>
+        <h3>Відомі мережі магазинів, товари з яких ми рекомендуємо</h3>
         <p>В нас є 2 постійних партнери, чиї товари ви часто зустрічатимете в наших рецептах та порадах:</p>
         <ul>
             <li><a href="https://shop.silpo.ua/">Наш улюблений постачальник смачних продуктів </a></li>
@@ -130,7 +224,7 @@
         </ul>
     </aside>
 
-        <form action="/відправити-повідомлення" method="post">
+        <form action="Sendmessage" method="post">
             <h2>Зворотній зв'язок</h2>
             <label for="email">Email:</label>
             <br>
@@ -162,6 +256,7 @@
                 <option value="Liked">Сподобався</option>
                 <option value="Needs improvement">Потребує доопрацювання</option>
                 <option value="Not enough">Неповний</option>
+                <option value="Not enough">Не сподобався</option>
             </select>
             <br>
     

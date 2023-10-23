@@ -3,12 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainstyle.css"> 
+    <style>
+        .favorites {
+            margin-top: 20px;
+        }
+
+        .favorites div {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #fff;
+            width: 70%; 
+        }
+
+        .favorites p {
+            margin: 0;
+            width: 100%; 
+        }
+
+        .favorites button {
+            background-color: #363636;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        
+    </style>
     <title>Кулінарний веб-сайт</title>
 </head>
 <body>
  
     <header>
-        <div style="padding: 10px; display: flex; justify-content: space-between;">
+        <div >
             <div> GAZDYNA</div>
             <nav>
                 <a href="recipies.html" >Рецепти</a> 
@@ -16,19 +45,23 @@
                 <a href="favorite.html" >Обране</a>
                 <a href="contacts.html" >Контакти</a> 
             </nav>
-            <button style="margin-right: 20px;">Увійти</button>
+            <button>Увійти</button>
         </div>
     </header>
+    <div class="favorites">
+        <div>
+            <p>Назва страви 1</p>
+            <button>Видалити</button>
+        </div>
+        <div>
+            <p>Назва страви 2</p>
+            <button>Видалити</button>
+        </div>
+        <div>
+            <p>Назва страви 3</p>
+            <button>Видалити</button>
+        </div>
+    </div>
 
-    <h3>Головна / Обране</h3>
-    <div >
-        <p>Назва страви 1 <button>Видалити</button></p>
-    </div>
-    <div >
-        <p>Назва страви 2 <button>Видалити</button></p>
-    </div>
-    <div >
-        <p>Назва страви 3 <button>Видалити</button></p>
-    </div>
 </body>
 </html>
