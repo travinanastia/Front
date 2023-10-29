@@ -7,7 +7,7 @@
   
 body {
     font-family: Arial;
-    background: linear-gradient(to bottom, #f8edd8, #fdd0d6);
+    background: linear-gradient(to bottom, #fffaf0, #fdd0d6);
 }
 
 header {
@@ -95,6 +95,15 @@ form {
 label {
     display: block;
     margin-top: 10px;
+}
+
+.radio-container {
+    display: flex;
+    align-items: center; 
+}
+
+.radio-container input[type="radio"] {
+    margin: 10px 10px; 
 }
 
 input[type="text"],

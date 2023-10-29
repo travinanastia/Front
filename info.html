@@ -17,7 +17,7 @@
         text-decoration: underline;
     }       
 
-    h2+h3{
+    h2 + h3{
         color:green;
     }
 
@@ -224,7 +224,7 @@
         </ul>
     </aside>
 
-        <form action="Sendmessage" method="post">
+        <form action="Sendmessage" method="post" onsubmit="return validateAge()">
             <h2>Зворотній зв'язок</h2>
             <label for="email">Email:</label>
             <br>
@@ -243,11 +243,12 @@
     
             <label>Освіта:</label>
             <br>
-            <input type="radio" id="education1" name="education" value="cook">
-            <label for="education1">Кулінарна</label>
-            <br>
-            <input type="radio" id="education2" name="education" value="other">
-            <label for="education2">Інша</label>
+            <div class="radio-container">
+                <input type="radio" id="education1" name="education" value="cook">
+                <label for="education1">Кулінарна</label>
+                <input type="radio" id="education2" name="education" value="other">
+                <label for="education2">Інша</label>
+            </div>
             <br>
     
             <label>Оцінка якості матеріалу:</label>
@@ -275,6 +276,23 @@
             Email: info@example.com
         </address>
     </footer>
+    <script>
+        function validateAge() {
+            var ageInput = document.getElementById('age');
+            var ageValue = parseInt(ageInput.value);
+            if (isNaN(ageValue) || ageValue <= 0) {
+                var newAgeValue = prompt("Помилка, введіть правильне значення для віку:", "");
+                if (newAgeValue !== null) {
+                    ageInput.value = newAgeValue;
+                    return validateAge(); 
+                } else {
+                    ageInput.focus();
+                    return false; 
+                }
+            }
+            return true; 
+        }
+    </script>
 </body>
 </html>
 
